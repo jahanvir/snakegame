@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         // Check if the new head position is within the boundaries
-        if (newHead.x < 1 || newHead.x > gridSize || newHead.y < 1 || newHead.y > gridSize) {
+        if (newHead.x < 1 || newHead.x > gridSize-1 || newHead.y < 1 || newHead.y > gridSize-1) {
             // Snake hit the boundary, game over
             gameOver();
             return;
@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateNewFood() {
-        food.x = Math.floor(Math.random() * gridSize) + 1;
-        food.y = Math.floor(Math.random() * gridSize) + 1;
+        food.x = Math.floor(Math.random() * (gridSize-1)) + 1;
+        food.y = Math.floor(Math.random() * (gridSize-1)) + 1;
     }
 
     function checkCollision() {
