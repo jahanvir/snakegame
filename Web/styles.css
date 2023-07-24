@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    border: 1px solid #000; /* Add border to show the boundaries */
+    gap: 1px;
+    width: 400px; /* Set the width of the game container */
+    height: 400px; /* Set the height of the game container */
+    margin: auto; /* Center the game container */ 
+}
+
+.snake, .food {
+    width: 100%;
+    height: 100%;
+}
+
+.snake {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: relative;
+}
+
+.eye {
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+.snake-head {
+    background-color: green;
+    position: relative;
+}
+
+.food {
+    background-color: red;
+}
+
+#score {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 30px);
+    font-size: 18px;
+    font-weight: bold;
+}
